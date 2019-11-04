@@ -11,3 +11,5 @@
     </li>
   {% endfor %}
 </ul>
+
+{% include adsense.html %}
