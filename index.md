@@ -18,8 +18,8 @@
   {% endfor %}
 </ul>
 
-{% for post in site.posts %}
- <section class="section">
+{% for post in site.posts limit:10 %}
+<section class="section">
   <article>
     <div class="page-header">
       <h1><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a><h1>
