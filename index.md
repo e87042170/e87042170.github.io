@@ -19,7 +19,7 @@
 </ul>
 
 {% for post in site.posts limit:10 %}
-<section class="section">
+<div class="section">
   <article>
     <div class="page-header">
       <h1><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a><h1></div>
@@ -37,7 +37,7 @@
       <a class="btn" href="{{ BASE_PATH }}{{ post.url }}">Read more...</a>
     </div>
   <article>
-</section>
+</div>
 {% endfor %}
 
 {% include adsense.html %}
