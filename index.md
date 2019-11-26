@@ -21,7 +21,7 @@
 {% for post in site.posts limit:10 %}
 <section class="section">
 <article>
-<div class="page-header">
+<div class="">
 <h1><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a><h1>
 </div>
 <div class="note post-info">
