@@ -25,7 +25,7 @@
       <h1><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a><h1>
     </div>
     <div class="note post-info">
-      分類：<a href="categorise.html#{{ post.category }}-ref">{{ post.category}}</a>
+      分類：<a href="categorise.html#{{ post.category }}-ref">{{ post.category }}</a>
     </div>
         
     {% if post.content contains "<!-- more -->" %}
