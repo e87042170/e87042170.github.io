@@ -38,6 +38,7 @@
       <a class="btn" href="{{ BASE_PATH }}{{ post.url }}">Read more...</a>
     </div>
   <article>
+  
 </section>
 {% endfor %}
 
