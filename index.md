@@ -1,9 +1,10 @@
+<h2>Posts:</h2>
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
       <small>{{ post.date | date: '%B %d, %Y' }}</small>
-      {{ post.excerpt }}
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt }}</p>
     </li>
   {% endfor %}
 </ul>
