@@ -1,3 +1,3 @@
 <div class="content">
-  {{% include latestposts.html %}}
+{% include latestposts.html %}
 </div>
