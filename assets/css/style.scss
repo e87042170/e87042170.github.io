@@ -15,3 +15,6 @@
 .content .read-more {
     text-align: right;
 }
+.content .read-more :first-child {
+    float: left;
+}
