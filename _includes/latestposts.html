@@ -2,7 +2,7 @@
 <ul>
   {% for post in site.posts :10 %}
     <li>
-      <div><small><i class="fa fa-calendar"></i> <i>{{ post.date | date_to_string }}</i></small></div>
+      <div><small><i class="fa fa-calendar"></i><i> {{ post.date | date_to_string }}</i></small></div>
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <p>{{ post.excerpt | strip_html | truncatewords:30 }}</p>
       <div class="read-more"><a href="{{ post.url }}">Read more...</a></div>
