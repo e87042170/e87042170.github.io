@@ -22,7 +22,18 @@
   </head>
   <body>
     <!--<a id="skip-to-content" href="#content">Skip to the content.</a>-->
-
+    <nav class="main-nav">
+      <ul>
+        {% assign nav_pages = site.pages %}
+        {% for p in nav_pages %}
+          <li>
+            <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
+              {{ p.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
