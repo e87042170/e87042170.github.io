@@ -3,6 +3,13 @@
 
 @import "{{ site.theme }}";
 
-.main-content .content h2{
-  magin-top:2rem;
+.content ul {
+    padding-inline-start: 0px;
+}
+.content ul li {
+    margin: 2rem auto;
+    list-style: none;
+}
+.content .read-more {
+    text-align: right;
 }
