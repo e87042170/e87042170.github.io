@@ -2,7 +2,9 @@
 ---
 
 @import "{{ site.theme }}";
-
+.content ul li h2{
+    margin-top:0;
+}
 .content ul {
     padding-inline-start: 0px;
 }
