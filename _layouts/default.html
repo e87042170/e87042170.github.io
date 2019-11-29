@@ -24,7 +24,7 @@
     <!--<a id="skip-to-content" href="#content">Skip to the content.</a>-->
     <nav class="main-nav">
       <ul>
-        {% assign nav_pages = site.pages %}
+        {% assign nav_pages = site.html_pages %}
         {% for p in nav_pages %}
           <li>
             <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
