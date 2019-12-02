@@ -10,11 +10,12 @@ title: Home
 {% for post in paginator.posts %}
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
   <p class="author">
-    <i class="fa fa-calander"></i><span class="date">{{ post.date | date_to_string }}</span>
+    <i class="fa fa-calendar"></i><span class="date">{{ post.date | date_to_string }}</span>
   </p>
   <div class="content">
-    {{ post.content }}
+    {{ post.excerpt | strip_html | truncatewords:30 }}
   </div>
+  <div class="read-more"><a href="{{ post.url }}">Read more...</a></div>
 {% endfor %}
 
 <!-- Pagination links -->
