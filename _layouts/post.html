@@ -44,11 +44,11 @@
       {% if paginator.total_pages > 1 %}
       <div class="pagination">
         {% if page.previous.url %}
-          <a href="{{ page.previous.url | relative_url }}">&laquo; 上一篇 <span>{{ page.previous.title }}</span></a>
+          <a class="prev" href="{{ page.previous.url | relative_url }}">&laquo; 上一篇 <span>{{ page.previous.title }}</span></a>
         {% endif %}
 
         {% if page.next.url %}
-          <a href="{{ page.next.url | relative_url }}"><span>{{ page.next.title }}</span> 下一篇 &raquo;</a>
+          <a class="next" href="{{ page.next.url | relative_url }}"><span>{{ page.next.title }}</span> 下一篇 &raquo;</a>
         {% endif %}
       </div>
       {% endif %}
