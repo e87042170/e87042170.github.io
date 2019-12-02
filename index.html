@@ -7,18 +7,20 @@ title: Home
 </div>-->
 
 <!-- This loops through the paginated posts -->
+<div class="content">
+  <ul>
 {% for post in paginator.posts %}
-  <div class="content">
     <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-    <p class="author">
-      <i class="fa fa-calendar"></i><span class="date">{{ post.date | date_to_string }}</span>
-    </p>
+    <div class="author">
+      <i class="fa fa-calendar"></i> <span class="date">{{ post.date | date_to_string }}</span>
+    </div>
     
       {{ post.excerpt | strip_html | truncatewords:30 }}
     
     <div class="read-more"><a href="{{ post.url }}">Read more...</a></div>
-  </div>
 {% endfor %}
+  </ul>
+</div>
 
 <!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
