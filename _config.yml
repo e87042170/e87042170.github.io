@@ -10,5 +10,3 @@ paginate_path: "/page:num/"
 navs:
 - title: 首頁
   url: /
-
-permalink: /404.html
