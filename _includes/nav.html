@@ -1,0 +1,12 @@
+<nav class="main-nav">
+  <ul>
+    {% assign nav_pages = site.navs %}
+    {% for p in nav_pages %}
+      <li>
+        <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
+          {{ p.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
