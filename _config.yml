@@ -10,3 +10,9 @@ paginate_path: "/page:num/"
 navs:
 - title: 首頁
   url: /
+
+- title: 分類
+  url: /categories.html
+
+- title: 標籤
+  url: /tags.html
