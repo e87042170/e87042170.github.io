@@ -2,12 +2,11 @@
 layout: default
 title: My Blog
 ---
-<h2>最新文章</h2>
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
   <p class="author">
-    <span class="date">{{ post.date }}</span>
+    <i class="fa fa-calander"></i><span class="date">{{ post.date | date_to_string }}</span>
   </p>
   <div class="content">
     {{ post.content }}
@@ -18,9 +17,9 @@ title: My Blog
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; 上一頁</a>
   {% else %}
-    <span>&laquo; Prev</span>
+    <span>&laquo; 上一頁</span>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
@@ -34,9 +33,9 @@ title: My Blog
   {% endfor %}
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+    <a href="{{ paginator.next_page_path | relative_url }}">下一頁 &raquo;</a>
   {% else %}
-    <span>Next &raquo;</span>
+    <span>下一頁 &raquo;</span>
   {% endif %}
 </div>
 {% endif %}
