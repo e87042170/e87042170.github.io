@@ -3,3 +3,7 @@ description: 紀錄一些學習筆記以及一些網頁工具.
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-cayman
+plugins:
+  jekyll-paginate
+paginate: 1
+paginate_path: "/blog/page:num/"
