@@ -14,9 +14,7 @@ title: Home
     <div class="author">
       <i class="fa fa-calendar"></i> <span class="date">{{ post.date | date_to_string }}</span>
     </div>
-    
-      {{ post.excerpt | strip_html | truncatewords:30 }}
-    
+    <p>{{ post.excerpt | strip_html | truncatewords:30 }}</p>    
     <div class="read-more"><a href="{{ post.url }}">Read more...</a></div></li>
 {% endfor %}
   </ul>
