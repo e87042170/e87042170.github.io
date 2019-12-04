@@ -4,7 +4,9 @@ show_downloads: false
 google_analytics:
 theme: jekyll-theme-cayman
 
-paginate: 1
+plugins:
+  - jekyll-paginate
+paginate: 10
 paginate_path: "/page:num/"
 
 navs:
