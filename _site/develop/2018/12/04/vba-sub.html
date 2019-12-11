@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>VBA - 撰寫 Visual Basic 陳述式 | Welcome to e87042170’s Homepage</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="VBA - 撰寫 Visual Basic 陳述式" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="在 Visual Basic陳述式是完整的指令。 它可以包含關鍵字、 運算子、變數、常數和運算式。 每個陳述式屬於下列其中一個下列三種類別： 宣告陳述式，用以命名變數、 常數或程序，並且也可以指定資料類型。 指派陳述式，其指派給變數或常數的值或運算式。" />
+<meta property="og:description" content="在 Visual Basic陳述式是完整的指令。 它可以包含關鍵字、 運算子、變數、常數和運算式。 每個陳述式屬於下列其中一個下列三種類別： 宣告陳述式，用以命名變數、 常數或程序，並且也可以指定資料類型。 指派陳述式，其指派給變數或常數的值或運算式。" />
+<link rel="canonical" href="http://localhost:4000/develop/2018/12/04/vba-sub.html" />
+<meta property="og:url" content="http://localhost:4000/develop/2018/12/04/vba-sub.html" />
+<meta property="og:site_name" content="Welcome to e87042170’s Homepage" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-04T00:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"在 Visual Basic陳述式是完整的指令。 它可以包含關鍵字、 運算子、變數、常數和運算式。 每個陳述式屬於下列其中一個下列三種類別： 宣告陳述式，用以命名變數、 常數或程序，並且也可以指定資料類型。 指派陳述式，其指派給變數或常數的值或運算式。","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/develop/2018/12/04/vba-sub.html"},"@type":"BlogPosting","url":"http://localhost:4000/develop/2018/12/04/vba-sub.html","headline":"VBA - 撰寫 Visual Basic 陳述式","dateModified":"2018-12-04T00:00:00+08:00","datePublished":"2018-12-04T00:00:00+08:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!--<a id="skip-to-content" href="#content">Skip to the content.</a>-->
+    
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Welcome to e87042170's Homepage</h1>
+      <h2 class="project-tagline">紀錄一些學習筆記以及一些網頁工具.</h2>
+      
+      
+    </header>
+    
+    <nav class="main-nav">
+  <ul>
+    
+    
+      <li>
+        <a href="/" >
+          首頁
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories.html" >
+          分類
+        </a>
+      </li>
+    
+      <li>
+        <a href="/tags.html" >
+          標籤
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+    <main id="content" class="main-content" role="main">
+      <h1>VBA - 撰寫 Visual Basic 陳述式</h1>
+      <div class="author">
+        <i class="fa fa-calendar"></i> <span class="date">04 Dec 2018</span>
+      </div>
+      <p>在 Visual Basic陳述式是完整的指令。 它可以包含關鍵字、 運算子、變數、常數和運算式。 每個陳述式屬於下列其中一個下列三種類別：</p>
+<ul>
+  <li><a href="#撰寫宣告陳述式">宣告陳述式</a>，用以命名變數、 常數或程序，並且也可以指定資料類型。</li>
+  <li><a href="撰寫指派陳述式">指派陳述式</a>，其指派給變數或常數的值或運算式。<!--more--></li>
+  <li><a href="撰寫可執行陳述式">可執行陳述式</a>，其初始動作。 這些陳述式可以執行的方法或函數，而且他們可以執行迴圈，或透過程式碼區塊的分支。 可執行陳述式通常包含數學或條件的運算子。</li>
+</ul>
+
+<h2 id="透過多行繼續陳述式">透過多行繼續陳述式</h2>
+
+<p>陳述式通常是適合在同一行，但您可以使用行接續字元繼續到下一行的陳述式。 在下列範例中， MsgBox可執行陳述式會繼續超過三行：</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Sub</span> <span class="nf">DemoBox</span><span class="p">()</span> <span class="c1">'This procedure declares a string variable, </span>
+ <span class="c1">' assigns it the value Claudia, and then displays </span>
+ <span class="c1">' a concatenated message. </span>
+ <span class="k">Dim</span> <span class="nv">myVar</span> <span class="ow">As</span> <span class="kt">String</span> 
+ <span class="n">myVar</span> <span class="o">=</span> <span class="s">"John"</span> 
+ <span class="n">MsgBox</span> <span class="n">Prompt</span><span class="p">:</span><span class="o">=</span><span class="s">"Hello "</span> <span class="o">&amp;</span> <span class="n">myVar</span><span class="p">,</span> <span class="n">_</span> 
+ <span class="n">Title</span><span class="p">:</span><span class="o">=</span><span class="s">"Greeting Box"</span><span class="p">,</span> <span class="n">_</span> 
+ <span class="n">Buttons</span><span class="p">:</span><span class="o">=</span><span class="n">vbExclamation</span> 
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div></div>
+
+<h2 id="新增註解">新增註解</h2>
+
+<p>註解可以說明程序或讀取您的程式碼的任何人的特定指示。 執行您的程序時，Visual Basic 會忽略註解。 註解行開始使用單引號 （’） 或Rem後面緊接著一個空格，並可以新增的程序中的任何地方。 若要將註解新增至陳述式的同一行，插入單引號之後的陳述式，後面接著註解。 根據預設，以綠色文字顯示註解。</p>
+
+<h2 id="請檢查語法錯誤">請檢查語法錯誤</h2>
+
+<p>如果您在輸入一行程式碼後按 <code class="highlighter-rouge">ENTER</code>，列會顯示紅色 （錯誤訊息也會顯示），您必須了解您的陳述式有什麼問題，並加以修正。</p>
+
+<h2 id="撰寫宣告陳述式">撰寫宣告陳述式</h2>
+
+<p>您可以使用宣告陳述式名稱，並定義程序、變數、陣列和常數。 當您宣告程序、 變數，或常數，您也定義其範圍時，根據您將放在宣告和哪些關鍵字您使用宣告它。
+下列範例會包含三個宣告。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Sub</span> <span class="nf">ApplyFormat</span><span class="p">()</span> 
+    <span class="k">Const</span> <span class="nv">limit</span> <span class="ow">As</span> <span class="kt">Integer</span> <span class="o">=</span> <span class="mi">33</span> 
+    <span class="k">Dim</span> <span class="nv">myCell</span> <span class="ow">As</span> <span class="n">Range</span> 
+    <span class="c1">' More statements </span>
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div></div>
+
+<p><strong>Sub</strong>陳述式 （使用比對<strong>End Sub</strong>陳述式） 會宣告名為的程序<code class="highlighter-rouge">ApplyFormat</code>。 執行<strong>Sub</strong>到<strong>End Sub</strong>陳述式所含括的所有陳述式的每當<code class="highlighter-rouge">ApplyFormat</code>呼叫或執行程序。</p>
+
+<p><strong>Const</strong>陳述式會宣告常數<code class="highlighter-rouge">limit</code>指定<strong>Integer</strong>資料類型和值的 33。</p>
+
+<p><strong>Dim</strong>陳述式會宣告常數<code class="highlighter-rouge">myCell</code>變數。 資料類型是物件，在此情況下，Microsoft Excel <strong>Range</strong>物件。 您可以宣告為在您使用的應用程式中公開的任何物件的變數。 <strong>Dim</strong>陳述式是一種類型的陳述式，用來宣告變數。 用於 declarations 其他關鍵字是<strong>ReDim</strong>、<strong>Static</strong>、<strong>Public</strong>、<strong>Private</strong> 和<strong>Const</strong>。</p>
+
+<h2 id="撰寫指派陳述式">撰寫指派陳述式</h2>
+
+<p>指派陳述式會指派給變數或常數的值或運算式。 指派陳述式一律包含等號 (=)。</p>
+
+<p>下列範例會將<strong>InputBox</strong>函數的傳回值指派給變數。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Sub</span> <span class="nf">Question</span><span class="p">()</span> 
+ <span class="k">Dim</span> <span class="nv">yourName</span> <span class="ow">As</span> <span class="kt">String</span> 
+ <span class="n">yourName</span> <span class="o">=</span> <span class="n">InputBox</span><span class="p">(</span><span class="s">"What is your name?"</span><span class="p">)</span> 
+ <span class="n">MsgBox</span> <span class="s">"Your name is "</span> <span class="o">&amp;</span> <span class="n">yourName</span> 
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div></div>
+
+<p><strong>Let</strong>陳述式是選擇性的並省略通常。 例如，可以撰寫先前指派的陳述式。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Let</span> <span class="n">yourName</span> <span class="o">=</span> <span class="n">InputBox</span><span class="p">(</span><span class="s">"What is your name?"</span><span class="p">).</span> 
+</code></pre></div></div>
+
+<p><strong>Set</strong> 陳述式用來將物件指派給已宣告為物件的變數。 需要<strong>Set</strong>關鍵字。 在下列範例中， <strong>Set</strong>陳述式會在 Sheet1 上的範圍指派給物件變數<code class="highlighter-rouge">myCell</code>。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Sub</span> <span class="nf">ApplyFormat</span><span class="p">()</span> 
+<span class="k">Dim</span> <span class="nv">myCell</span> <span class="ow">As</span> <span class="n">Range</span> 
+<span class="k">Set</span> <span class="n">myCell</span> <span class="o">=</span> <span class="n">Worksheets</span><span class="p">(</span><span class="s">"Sheet1"</span><span class="p">).</span><span class="n">Range</span><span class="p">(</span><span class="s">"A1"</span><span class="p">)</span> 
+ <span class="k">With</span> <span class="n">myCell</span><span class="p">.</span><span class="n">Font</span> 
+ <span class="p">.</span><span class="n">Bold</span> <span class="o">=</span> <span class="k">True</span> 
+ <span class="p">.</span><span class="n">Italic</span> <span class="o">=</span> <span class="k">True</span> 
+ <span class="k">End</span> <span class="k">With</span> 
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div></div>
+
+<p>設定屬性值的陳述式也是指派陳述式。 下列範例會設定作用中儲存格的<strong>Font</strong>物件的<strong>Bold</strong>屬性。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ActiveCell</span><span class="p">.</span><span class="n">Font</span><span class="p">.</span><span class="n">Bold</span> <span class="o">=</span> <span class="k">True</span> 
+</code></pre></div></div>
+
+<h2 id="撰寫可執行陳述式">撰寫可執行陳述式</h2>
+
+<p>可執行陳述式會初始化巨集指令。 它可以執行某個方法或函式，而且它可以執行迴圈，或透過程式碼區塊的分支。 可執行陳述式通常包含數學或條件的運算子。</p>
+
+<p>下列範例會使用 <strong>For</strong>…<strong>Next</strong> 陳述式來逐一查看_MyRange_作用中的 Microsoft Excel 活頁簿中 Sheet1 上名為範圍中每個儲存格。 變數<code class="highlighter-rouge">c</code>是包含_MyRange_中的儲存格的集合中的儲存格。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Sub</span> <span class="nf">ApplyFormat</span><span class="p">()</span> 
+<span class="k">Const</span> <span class="nv">limit</span> <span class="ow">As</span> <span class="kt">Integer</span> <span class="o">=</span> <span class="mi">33</span> 
+<span class="k">For</span> <span class="k">Each</span> <span class="n">c</span> <span class="ow">In</span> <span class="n">Worksheets</span><span class="p">(</span><span class="s">"Sheet1"</span><span class="p">).</span><span class="n">Range</span><span class="p">(</span><span class="s">"MyRange"</span><span class="p">).</span><span class="n">Cells</span> 
+    <span class="k">If</span> <span class="n">c</span><span class="p">.</span><span class="n">Value</span> <span class="o">&gt;</span> <span class="n">limit</span> <span class="k">Then</span> 
+        <span class="k">With</span> <span class="n">c</span><span class="p">.</span><span class="n">Font</span> 
+            <span class="p">.</span><span class="n">Bold</span> <span class="o">=</span> <span class="k">True</span> 
+            <span class="p">.</span><span class="n">Italic</span> <span class="o">=</span> <span class="k">True</span> 
+        <span class="k">End</span> <span class="k">With</span> 
+    <span class="k">End</span> <span class="k">If</span> 
+<span class="k">Next</span> <span class="n">c</span> 
+<span class="n">MsgBox</span> <span class="s">"All done!"</span> 
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div></div>
+
+<p><strong>If</strong>…<strong>Then</strong>…<strong>Else</strong> 陳述式範例中的會檢查儲存格的值。 如果值大於 33， <strong>With</strong>陳述式會設定該儲存格的<strong>Font</strong>物件的<strong>Bold</strong>和<strong>Italic</strong>屬性。 <strong>If</strong>…<strong>Then</strong>…<strong>Else</strong>以<strong>End If</strong>陳述式結尾。 <strong>With</strong>陳述式可以儲存輸入因為下列<strong>With</strong>關鍵字的物件上自動執行其所包含的陳述式。</p>
+
+<p>下一個陳述式會呼叫包含_MyRange_中的儲存格的集合中的下一個儲存格。</p>
+
+<p><strong>Msgbox</strong> 函式 （這會顯示內建的 Visual Basic 對話方塊） 會顯示訊息，指出<strong>Sub</strong>程序已完成執行。</p>
+
+
+
+      <div class="pagination">
+        
+          <a class="prev" href="/develop/2018/12/03/vba.html">&laquo; 上一篇 <p>VBA 簡介</p></a>
+        
+
+        
+          <a class="next" href="/develop/2018/12/05/vba-procedure.html">下一篇 &raquo; <p>VBA - 撰寫 Visual Basic 程序</p></a>
+        
+      </div>
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
