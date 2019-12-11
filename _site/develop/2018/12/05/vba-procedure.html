@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>VBA - 撰寫 Visual Basic 程序 | Welcome to e87042170’s Homepage</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="VBA - 撰寫 Visual Basic 程序" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="撰寫 Sub 程序 Sub程序是一系列的 Visual Basic 陳述式前後加上Sub到End Sub 陳述式所執行的動作，但不會傳回一個值。 Sub 程序可能需要傳遞引數，例如常數、變數或運算式，會呼叫程序。 如果子程序沒有任何引數， Sub陳述式必須包含括號空集合。" />
+<meta property="og:description" content="撰寫 Sub 程序 Sub程序是一系列的 Visual Basic 陳述式前後加上Sub到End Sub 陳述式所執行的動作，但不會傳回一個值。 Sub 程序可能需要傳遞引數，例如常數、變數或運算式，會呼叫程序。 如果子程序沒有任何引數， Sub陳述式必須包含括號空集合。" />
+<link rel="canonical" href="http://localhost:4000/develop/2018/12/05/vba-procedure.html" />
+<meta property="og:url" content="http://localhost:4000/develop/2018/12/05/vba-procedure.html" />
+<meta property="og:site_name" content="Welcome to e87042170’s Homepage" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-05T00:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"撰寫 Sub 程序 Sub程序是一系列的 Visual Basic 陳述式前後加上Sub到End Sub 陳述式所執行的動作，但不會傳回一個值。 Sub 程序可能需要傳遞引數，例如常數、變數或運算式，會呼叫程序。 如果子程序沒有任何引數， Sub陳述式必須包含括號空集合。","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/develop/2018/12/05/vba-procedure.html"},"@type":"BlogPosting","url":"http://localhost:4000/develop/2018/12/05/vba-procedure.html","headline":"VBA - 撰寫 Visual Basic 程序","dateModified":"2018-12-05T00:00:00+08:00","datePublished":"2018-12-05T00:00:00+08:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!--<a id="skip-to-content" href="#content">Skip to the content.</a>-->
+    
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Welcome to e87042170's Homepage</h1>
+      <h2 class="project-tagline">紀錄一些學習筆記以及一些網頁工具.</h2>
+      
+      
+    </header>
+    
+    <nav class="main-nav">
+  <ul>
+    
+    
+      <li>
+        <a href="/" >
+          首頁
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories.html" >
+          分類
+        </a>
+      </li>
+    
+      <li>
+        <a href="/tags.html" >
+          標籤
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+    <main id="content" class="main-content" role="main">
+      <h1>VBA - 撰寫 Visual Basic 程序</h1>
+      <div class="author">
+        <i class="fa fa-calendar"></i> <span class="date">05 Dec 2018</span>
+      </div>
+      <h2 id="撰寫-sub-程序">撰寫 Sub 程序</h2>
+
+<p><strong>Sub</strong>程序是一系列的 Visual Basic 陳述式前後加上<strong>Sub</strong>到<strong>End Sub</strong> 陳述式所執行的動作，但不會傳回一個值。 <strong>Sub</strong> 程序可能需要傳遞引數，例如常數、變數或運算式，會呼叫程序。 如果子程序沒有任何引數， <strong>Sub</strong>陳述式必須包含括號空集合。<!--more--></p>
+
+<h2 id="撰寫屬性程序">撰寫屬性程序</h2>
+
+<p>屬性程序是一系列的 Visual Basic陳述式，可讓程式設計人員來建立和操作的自訂屬性。</p>
+<ul>
+  <li>屬性程序可以用來建立表單、標準模組和類別模組的唯讀屬性。</li>
+  <li>屬性程序應該用於而不是設定此屬性值時必須執行的程式碼中的Public變數。</li>
+  <li>與公用變數，不同屬性程序可以有指派給他們在物件瀏覽器中的說明字串。</li>
+</ul>
+
+<p>當您建立屬性程序時，它會成為包含該程序的模組的屬性。 Visual Basic 提供下列三種類型的屬性程序。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>程序</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Property Let</td>
+      <td>此程序設定屬性的值。</td>
+    </tr>
+    <tr>
+      <td>Property Get</td>
+      <td>傳回值屬性的程序。</td>
+    </tr>
+    <tr>
+      <td>Property Set</td>
+      <td>設定物件的參照程序。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>宣告屬性程序的語法如下所示。</p>
+
+<p>[<strong>Public</strong> | <strong>Private</strong>] [<strong>Static</strong>] Property {<strong>Get</strong> | <strong>Let</strong> | <strong>Set</strong>} propertyname [（arguments 引數）][<strong>As</strong> type] statements陳述式 <strong>End Property</strong></p>
+
+<p>屬性程序通常是用於配對： <strong>Property Get</strong>與屬性設定並使用<strong>Property Get</strong>與<strong>Property Let</strong> 。 宣告<strong>Property Get</strong>程序單獨就像是宣告唯讀屬性。 一起使用所有三個屬性程序類型時才有用的<strong>Variant</strong>變數，因為只有一個<strong>Variant</strong>可以包含的物件或其他資料類型資訊。 <strong>Property Set</strong>被預定用於物件;<strong>Property Let</strong>則不。</p>
+
+<p>下表顯示在屬性程序宣告中宣告的必要引數。</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>程序</td>
+      <td>宣告語法</td>
+    </tr>
+    <tr>
+      <td><strong>Property Get</strong></td>
+      <td><strong>Property Get</strong> propname(1，…， n) <strong>As</strong> type</td>
+    </tr>
+    <tr>
+      <td><strong>Property Let</strong></td>
+      <td><strong>Property Let</strong> propname(1，…、、 n， n + 1)</td>
+    </tr>
+    <tr>
+      <td><strong>Property Set</strong></td>
+      <td><strong>Property Set</strong> propname(1，…、 n， n + 1)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>透過最後一個引數 (1，…， n) 下一步] 的第一個引數必須共用相同的名稱和資料類型屬性的所有程序具有相同名稱。</p>
+
+<p><strong>Property Get</strong>程序宣告會比相關的<strong>Property Let</strong>和<strong>Property Set</strong>宣告一個較少引數。 <strong>Property Get</strong>程序的資料類型必須是相關的<strong>Property Let</strong>和<strong>Property Set</strong>宣告中的最後一個引數 (n + 1) 的資料類型相同。 例如，如果您要宣告下列的<strong>Property Let</strong>程序， <strong>Property Get</strong>宣告都必須以<strong>Property Let</strong>程序的引數具有相同名稱和資料類型使用引數。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Property</span> <span class="nf">Let</span> <span class="n">Names</span><span class="p">(</span><span class="n">intX</span> <span class="ow">As</span> <span class="kt">Integer</span><span class="p">,</span> <span class="n">intY</span> <span class="ow">As</span> <span class="kt">Integer</span><span class="p">,</span> <span class="n">varZ</span> <span class="ow">As</span> <span class="kt">Variant</span><span class="p">)</span> 
+ <span class="c1">' Statement here. </span>
+<span class="k">End</span> <span class="k">Property</span> 
+ 
+<span class="k">Property</span> <span class="nf">Get</span> <span class="n">Names</span><span class="p">(</span><span class="n">intX</span> <span class="ow">As</span> <span class="kt">Integer</span><span class="p">,</span> <span class="n">intY</span> <span class="ow">As</span> <span class="kt">Integer</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">Variant</span> 
+ <span class="c1">' Statement here. </span>
+<span class="k">End</span> <span class="k">Property</span> 
+</code></pre></div></div>
+
+<p><strong>Property Set</strong>的宣告中的最後一個引數的資料類型必須是一種物件類型或Variant。</p>
+
+<h2 id="撰寫函式程序">撰寫函式程序</h2>
+
+<p><strong>函式</strong>程序是一系列的<strong>Function</strong> 和<strong>End Function</strong> 陳述式所含括的 Visual Basic陳述式。 該函數程序會類似於<strong>Sub</strong> 程序，但函數也可以傳回一個值。</p>
+
+<p><strong>函數</strong>程序可能需要引數，例如常數、變數或運算式，會以傳入呼叫的程序。 如果該<strong>函數</strong>程序會不有任何引數，其<strong>Function</strong>陳述式必須包含括號空集合。 函式會傳回一個值指派值給它的程序的一個或多個陳述式中的名稱。</p>
+
+<p>在下列範例中，<strong>攝氏</strong>函式會計算從華氏度攝氏度。 函式呼叫時從<strong>Main</strong>程序，包含引數值變數會傳遞至函數。 計算的結果是傳回呼叫程序，並顯示在訊息方塊中。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Sub</span> <span class="nf">Main</span><span class="p">()</span> 
+ <span class="n">temp</span> <span class="o">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">InputBox</span><span class="p">(</span><span class="n">Prompt</span><span class="p">:</span><span class="o">=</span> <span class="n">_</span> 
+ <span class="s">"Please enter the temperature in degrees F."</span><span class="p">,</span> <span class="n">Type</span><span class="p">:</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
+ <span class="n">MsgBox</span> <span class="s">"The temperature is "</span> <span class="o">&amp;</span> <span class="n">Celsius</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s">" degrees C."</span> 
+<span class="k">End</span> <span class="k">Sub</span> 
+ 
+<span class="k">Function</span> <span class="nf">Celsius</span><span class="p">(</span><span class="n">fDegrees</span><span class="p">)</span> 
+ <span class="n">Celsius</span> <span class="o">=</span> <span class="p">(</span><span class="n">fDegrees</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span> 
+<span class="k">End</span> <span class="k">Function</span>
+</code></pre></div></div>
+
+
+      <div class="pagination">
+        
+          <a class="prev" href="/develop/2018/12/04/vba-sub.html">&laquo; 上一篇 <p>VBA - 撰寫 Visual Basic 陳述式</p></a>
+        
+
+        
+          <a class="next" href="/develop/2018/12/06/vba-naming-rules.html">下一篇 &raquo; <p>VBA - 命名規則</p></a>
+        
+      </div>
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
