@@ -819,6 +819,9 @@ a {
   margin: 2rem auto;
   list-style: none; }
 
+.main-content ul li h3 {
+  margin-top: 0; }
+
 .content .read-more {
   text-align: right; }
 
@@ -834,4 +837,5 @@ a {
 
 .pagination {
   border-top: 1px solid #eee;
-  padding-top: 2rem; }
+  padding-top: 2rem;
+  margin-top: 2rem; }
