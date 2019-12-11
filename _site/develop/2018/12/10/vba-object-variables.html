@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>VBA - 建立物件變數 | Welcome to e87042170’s Homepage</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="VBA - 建立物件變數" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="您可以將物件變數完全相同視為它參照的物件。 您可以設定或傳回物件的屬性或使用下列任何一它的方法。 建立物件變數 1.宣告物件變數。 2.將物件變數指定給物件。" />
+<meta property="og:description" content="您可以將物件變數完全相同視為它參照的物件。 您可以設定或傳回物件的屬性或使用下列任何一它的方法。 建立物件變數 1.宣告物件變數。 2.將物件變數指定給物件。" />
+<link rel="canonical" href="http://localhost:4000/develop/2018/12/10/vba-object-variables.html" />
+<meta property="og:url" content="http://localhost:4000/develop/2018/12/10/vba-object-variables.html" />
+<meta property="og:site_name" content="Welcome to e87042170’s Homepage" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-10T00:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"您可以將物件變數完全相同視為它參照的物件。 您可以設定或傳回物件的屬性或使用下列任何一它的方法。 建立物件變數 1.宣告物件變數。 2.將物件變數指定給物件。","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/develop/2018/12/10/vba-object-variables.html"},"@type":"BlogPosting","url":"http://localhost:4000/develop/2018/12/10/vba-object-variables.html","headline":"VBA - 建立物件變數","dateModified":"2018-12-10T00:00:00+08:00","datePublished":"2018-12-10T00:00:00+08:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!--<a id="skip-to-content" href="#content">Skip to the content.</a>-->
+    
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Welcome to e87042170's Homepage</h1>
+      <h2 class="project-tagline">紀錄一些學習筆記以及一些網頁工具.</h2>
+      
+      
+    </header>
+    
+    <nav class="main-nav">
+  <ul>
+    
+    
+      <li>
+        <a href="/" >
+          首頁
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories.html" >
+          分類
+        </a>
+      </li>
+    
+      <li>
+        <a href="/tags.html" >
+          標籤
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+    <main id="content" class="main-content" role="main">
+      <h1>VBA - 建立物件變數</h1>
+      <div class="author">
+        <i class="fa fa-calendar"></i> <span class="date">10 Dec 2018</span>
+      </div>
+      <p>您可以將物件變數完全相同視為它參照的物件。 您可以設定或傳回物件的屬性或使用下列任何一它的方法。</p>
+
+<h2 id="建立物件變數">建立物件變數</h2>
+
+<p>1.宣告物件變數。
+2.將物件變數指定給物件。<!--more--></p>
+
+<h2 id="宣告物件變數">宣告物件變數</h2>
+
+<p>使用<strong>Dim</strong> 陳述式或其中一個其他宣告陳述式 (<strong>Public</strong>, <strong>Private</strong>, or <strong>Static</strong>) 來宣告物件變數。 參照到物件變數必須是物件的<strong>Variant、物件</strong> 或特定類型。 例如，下列宣告是有效的：</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">' Declare MyObject as Variant data type. </span>
+<span class="k">Dim</span> <span class="nv">MyObject</span> 
+<span class="c1">' Declare MyObject as Object data type. </span>
+<span class="k">Dim</span> <span class="nv">MyObject</span> <span class="ow">As</span> <span class="kt">Object</span> 
+<span class="c1">' Declare MyObject as Font type. </span>
+<span class="k">Dim</span> <span class="nv">MyObject</span> <span class="ow">As</span> <span class="n">Font</span> 
+</code></pre></div></div>
+
+<p>如果您不需要先宣告使用的物件變數，該物件變數資料型別預設為Variant 。</p>
+
+<p>直到執行的程序，才會知道特定的物件類型時，您可以與物件資料型別宣告物件變數。 若要建立的任何物件的一般參考使用物件的資料類型。</p>
+
+<p>如果您知道的特定物件類型，您應該物件變數宣告為該物件類型。 例如，如果應用程式包含範例物件類型，您可以使用其中一個這些陳述式宣告該物件的物件變數：</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Dim</span> <span class="nv">MyObject</span> <span class="ow">As</span> <span class="kt">Object</span> <span class="c1">' Declared as generic object. </span>
+<span class="k">Dim</span> <span class="nv">MyObject</span> <span class="ow">As</span> <span class="n">Sample</span> <span class="c1">' Declared only as Sample object. </span>
+</code></pre></div></div>
+
+<p>宣告特定物件類型提供更快的程式碼，並改善的可讀性檢查自動類型。</p>
+
+<h2 id="將物件變數指定給物件">將物件變數指定給物件</h2>
+
+<p>若要指派給物件變數的物件使用<strong>Set</strong> 陳述式。 您可以指派物件運算式或<strong>Nothing</strong>。 例如，下列的物件變數工作分派是有效的。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Set</span> <span class="n">MyObject</span> <span class="o">=</span> <span class="n">YourObject</span> <span class="c1">' Assign object reference. </span>
+<span class="k">Set</span> <span class="n">MyObject</span> <span class="o">=</span> <span class="k">Nothing</span> <span class="c1">' Discontinue association. </span>
+</code></pre></div></div>
+
+<p>您可以合併宣告物件變數使用<strong>Set</strong>陳述式中使用<strong>New</strong> 關鍵字物件指派給它。 例如：</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Set</span> <span class="n">MyObject</span> <span class="o">=</span> <span class="k">New</span> <span class="kt">Object</span> <span class="c1">' Create and Assign </span>
+</code></pre></div></div>
+
+<p>物件變數設定為等於<strong>Nothing</strong>會停止與任何特定物件關聯的物件變數。 這會防止您不小心變更藉由變更變數的物件。 物件變數一律設為<strong>Nothing</strong>之後關閉相關聯的物件，讓您可以測試是否該物件變數指向有效的物件。 例如：</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">If</span> <span class="k">Not</span> <span class="n">MyObject</span> <span class="ow">Is</span> <span class="k">Nothing</span> <span class="k">Then</span> 
+ <span class="c1">' Variable refers to valid object. </span>
+ <span class="p">.</span> <span class="err">.</span> <span class="err">.</span> 
+<span class="n">End</span> <span class="k">If</span> 
+</code></pre></div></div>
+
+<p>當然，這項測試可以永遠不會判斷絕對使用者已關閉包含的物件變數所參考的物件的應用程式。</p>
+
+<h2 id="參照物件的目前執行個體">參照物件的目前執行個體</h2>
+
+<p>使用<strong>Me</strong> 關鍵字來參照該物件的目前執行個體執行程式碼。 目前物件相關聯的所有程序具有存取權稱為 「我的物件。 使用<strong>Me</strong>是特別適合用來將物件的目前執行個體的相關資訊傳遞至另一個模組中的程序。 例如，假設您在模組中有下列程序：</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Sub</span> <span class="nf">ChangeObjectColor</span><span class="p">(</span><span class="n">MyObjectName</span> <span class="ow">As</span> <span class="kt">Object</span><span class="p">)</span> 
+ <span class="n">MyObjectName</span><span class="p">.</span><span class="n">BackColor</span> <span class="o">=</span> <span class="n">RGB</span><span class="p">(</span><span class="n">Rnd</span> <span class="o">*</span> <span class="mi">256</span><span class="p">,</span> <span class="n">Rnd</span> <span class="o">*</span> <span class="mi">256</span><span class="p">,</span> <span class="n">Rnd</span> <span class="o">*</span> <span class="mi">256</span><span class="p">)</span> 
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div></div>
+
+<p>您可以呼叫程序，並使用下列陳述式做為引數傳遞物件的目前執行個體：</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ChangeObjectColor</span> <span class="k">Me</span> 
+</code></pre></div></div>
+
+
+      <div class="pagination">
+        
+          <a class="prev" href="/develop/2018/12/09/vba-operator.html">&laquo; 上一篇 <p>VBA - 運算子 Operator</p></a>
+        
+
+        
+      </div>
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
