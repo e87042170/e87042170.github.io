@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>VBA - 使用 With 陳述式 | Welcome to e87042170’s Homepage</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="VBA - 使用 With 陳述式" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="With 陳述式可讓您指定的物件或使用者定義型別，能一次做整個系列的陳述式，而不需多次指定物件的名稱。 With陳述式讓您更快速地執行，並協助您避免重複輸入的程序。" />
+<meta property="og:description" content="With 陳述式可讓您指定的物件或使用者定義型別，能一次做整個系列的陳述式，而不需多次指定物件的名稱。 With陳述式讓您更快速地執行，並協助您避免重複輸入的程序。" />
+<link rel="canonical" href="http://localhost:4000/develop/2018/12/07/vba-using-with-statements.html" />
+<meta property="og:url" content="http://localhost:4000/develop/2018/12/07/vba-using-with-statements.html" />
+<meta property="og:site_name" content="Welcome to e87042170’s Homepage" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-07T00:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"With 陳述式可讓您指定的物件或使用者定義型別，能一次做整個系列的陳述式，而不需多次指定物件的名稱。 With陳述式讓您更快速地執行，並協助您避免重複輸入的程序。","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/develop/2018/12/07/vba-using-with-statements.html"},"@type":"BlogPosting","url":"http://localhost:4000/develop/2018/12/07/vba-using-with-statements.html","headline":"VBA - 使用 With 陳述式","dateModified":"2018-12-07T00:00:00+08:00","datePublished":"2018-12-07T00:00:00+08:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!--<a id="skip-to-content" href="#content">Skip to the content.</a>-->
+    
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Welcome to e87042170's Homepage</h1>
+      <h2 class="project-tagline">紀錄一些學習筆記以及一些網頁工具.</h2>
+      
+      
+    </header>
+    
+    <nav class="main-nav">
+  <ul>
+    
+    
+      <li>
+        <a href="/" >
+          首頁
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories.html" >
+          分類
+        </a>
+      </li>
+    
+      <li>
+        <a href="/tags.html" >
+          標籤
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+    <main id="content" class="main-content" role="main">
+      <h1>VBA - 使用 With 陳述式</h1>
+      <div class="author">
+        <i class="fa fa-calendar"></i> <span class="date">07 Dec 2018</span>
+      </div>
+      <p><strong>With</strong> 陳述式可讓您指定的<code class="highlighter-rouge">物件</code>或<code class="highlighter-rouge">使用者定義型別</code>，能一次做整個系列的陳述式，而不需多次指定物件的名稱。 <strong>With</strong>陳述式讓您更快速地執行，並協助您避免重複輸入的程序。<!--more--></p>
+
+<p>下列範例會使用數字 30 填滿儲存格範圍、 將套用粗體格式設定，並儲存格的內景色彩設定為黃色。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Sub</span> <span class="nf">FormatRange</span><span class="p">()</span> 
+ <span class="k">With</span> <span class="n">Worksheets</span><span class="p">(</span><span class="s">"Sheet1"</span><span class="p">).</span><span class="n">Range</span><span class="p">(</span><span class="s">"A1:C10"</span><span class="p">)</span> 
+ <span class="p">.</span><span class="n">Value</span> <span class="o">=</span> <span class="mi">30</span> 
+ <span class="p">.</span><span class="n">Font</span><span class="p">.</span><span class="n">Bold</span> <span class="o">=</span> <span class="k">True</span> 
+ <span class="p">.</span><span class="n">Interior</span><span class="p">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">RGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> 
+ <span class="k">End</span> <span class="k">With</span> 
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div></div>
+
+<p>您可以使用巢狀<strong>With</strong>陳述式的更大的效率。 下列範例會插入儲存格 A1 的公式和下例字型。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Sub</span> <span class="nf">MyInput</span><span class="p">()</span> 
+ <span class="k">With</span> <span class="n">Workbooks</span><span class="p">(</span><span class="s">"Book1"</span><span class="p">).</span><span class="n">Worksheets</span><span class="p">(</span><span class="s">"Sheet1"</span><span class="p">).</span><span class="n">Cells</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> 
+ <span class="p">.</span><span class="n">Formula</span> <span class="o">=</span> <span class="s">"=SQRT(50)"</span> 
+ <span class="k">With</span> <span class="p">.</span><span class="n">Font</span> 
+ <span class="p">.</span><span class="n">Name</span> <span class="o">=</span> <span class="s">"Arial"</span> 
+ <span class="p">.</span><span class="n">Bold</span> <span class="o">=</span> <span class="k">True</span> 
+ <span class="p">.</span><span class="n">Size</span> <span class="o">=</span> <span class="mi">8</span> 
+ <span class="k">End</span> <span class="k">With</span> 
+ <span class="k">End</span> <span class="k">With</span> 
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div></div>
+
+
+      <div class="pagination">
+        
+          <a class="prev" href="/develop/2018/12/06/vba-naming-rules.html">&laquo; 上一篇 <p>VBA - 命名規則</p></a>
+        
+
+        
+          <a class="next" href="/develop/2018/12/08/vba-data-type.html">下一篇 &raquo; <p>VBA - 資料類型</p></a>
+        
+      </div>
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
