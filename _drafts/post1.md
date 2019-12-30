@@ -4,8 +4,18 @@ title:  "Welcome to Jekyll!"
 excerpt_separator: <!--more-->
 ---
 
-## Welcome
+AutoCAD 圖檔標註出現一堆驚嘆號關不掉，怎麼辦？
 
-**Hello world**, this is my first Jekyll blog post.
+有些同事會問到為什麼 AutoCAD 會突然出現一堆黃色驚嘆號，很礙眼又礙事，而且關不掉，該怎麼辦？
 
-I hope you like it!
+會有這種情況發生通常是不小心按到"註解監控器(ANNOMONITOR)"。
+
+什麼是"註解監控器"呢？它有什麼作用？
+
+AutoCAD的說明是："當註解監視器打開時，系統會在非關聯式註解旁顯示一個徽章，藉此標示所有非關聯式註解。"
+
+那該怎麼關掉它呢？
+
+你可以在畫面右下方的狀態列找一個藍色的十字符號，點一下它就可以把它關閉；關閉時他是呈現灰色的十字符號，開啟時他是藍色的十字符號。
+
+或者你可以在指令列輸入"ANNOMONITOR"，然後再輸入"-1"，也可以關閉它。
