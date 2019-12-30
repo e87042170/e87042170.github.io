@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>VBA - 宣告陣列 | Welcome to e87042170’s Homepage</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="VBA - 宣告陣列" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Arrays的宣告方式與其他變數相同，方法是使用 Dim、Static、Private 或 Public 陳述式。 純量變數 (非陣列的變數) 與陣列變數之間的差異為，您通常必須指定陣列的大小。 指定大小的陣列是固定陣列。 您可以在執行程式時，變更其大小的陣列是動態陣列。" />
+<meta property="og:description" content="Arrays的宣告方式與其他變數相同，方法是使用 Dim、Static、Private 或 Public 陳述式。 純量變數 (非陣列的變數) 與陣列變數之間的差異為，您通常必須指定陣列的大小。 指定大小的陣列是固定陣列。 您可以在執行程式時，變更其大小的陣列是動態陣列。" />
+<link rel="canonical" href="http://localhost:4000/develop/2018/12/12/vba-declaring-arrays.html" />
+<meta property="og:url" content="http://localhost:4000/develop/2018/12/12/vba-declaring-arrays.html" />
+<meta property="og:site_name" content="Welcome to e87042170’s Homepage" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-12T00:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"Arrays的宣告方式與其他變數相同，方法是使用 Dim、Static、Private 或 Public 陳述式。 純量變數 (非陣列的變數) 與陣列變數之間的差異為，您通常必須指定陣列的大小。 指定大小的陣列是固定陣列。 您可以在執行程式時，變更其大小的陣列是動態陣列。","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/develop/2018/12/12/vba-declaring-arrays.html"},"@type":"BlogPosting","url":"http://localhost:4000/develop/2018/12/12/vba-declaring-arrays.html","headline":"VBA - 宣告陣列","dateModified":"2018-12-12T00:00:00+08:00","datePublished":"2018-12-12T00:00:00+08:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!--<a id="skip-to-content" href="#content">Skip to the content.</a>-->
+    
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Welcome to e87042170's Homepage</h1>
+      <h2 class="project-tagline">這裡紀錄一些學習筆記以及存放一些網頁工具.</h2>
+      
+      
+    </header>
+    
+    <nav class="main-nav">
+  <ul>
+    
+    
+      <li>
+        <a href="/" >
+          首頁
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories.html" >
+          分類
+        </a>
+      </li>
+    
+      <li>
+        <a href="/tags.html" >
+          標籤
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+    <main id="content" class="main-content" role="main">
+      <h1>VBA - 宣告陣列</h1>
+      <div class="author">
+        <i class="fa fa-calendar"></i> <span class="date">12 Dec 2018</span>
+      </div>
+      <p><strong>Arrays</strong>的宣告方式與其他變數相同，方法是使用 <strong>Dim</strong>、<strong>Static</strong>、<strong>Private</strong> 或 <strong>Public</strong> 陳述式。 純量變數 (非陣列的變數) 與<strong>陣列</strong>變數之間的差異為，您通常必須指定<strong>陣列</strong>的大小。
+指定大小的陣列是<strong>固定陣列</strong>。 您可以在執行程式時，變更其大小的陣列是<strong>動態陣列</strong>。<!--more--></p>
+
+<p>將陣列從 0 或 1 建立索引，取決於 <strong>Option Base</strong> 陳述式的設定。 如果未指定 <strong>Option Base 1</strong>，則所有的陣列索引會從<strong>0</strong>開始。</p>
+
+<h2 id="宣告固定陣列">宣告固定陣列</h2>
+
+<p>在下列程式碼中，固定陣列宣告為具有 11 列和 11 行的 Integer 陣列：</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Dim</span> <span class="nv">MyArray</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">Integer</span> 
+</code></pre></div></div>
+
+<p>第一個引數代表列，第二個引數代表行。</p>
+
+<p>如同任何其他變數宣告，除非您為陣列指定資料類型，否則宣告陣列中元素的資料類型為 <strong>Variant</strong>。 陣列的每個數值 <strong>Variant</strong> 元素會使用 16 個位元組。 每個字串 <strong>Variant</strong> 元素會使用 22 個位元組。 若要撰寫盡可能精簡的程式碼，請將您的陣列明確宣告為 <strong>Variant</strong> 以外的資料類型。</p>
+
+<p>下列幾行程式碼會比較數個陣列的大小。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">' Integer array uses 22 bytes (11 elements * 2 bytes). </span>
+<span class="k">ReDim</span> <span class="n">MyIntegerArray</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">Integer</span> 
+ 
+<span class="c1">' Double-precision array uses 88 bytes (11 elements * 8 bytes). </span>
+<span class="k">ReDim</span> <span class="n">MyDoubleArray</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">Double</span> 
+ 
+<span class="c1">' Variant array uses at least 176 bytes (11 elements * 16 bytes). </span>
+<span class="k">ReDim</span> <span class="n">MyVariantArray</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> 
+ 
+<span class="c1">' Integer array uses 100 * 100 * 2 bytes (20,000 bytes). </span>
+<span class="k">ReDim</span> <span class="n">MyIntegerArray</span> <span class="p">(</span><span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">Integer</span> 
+ 
+<span class="c1">' Double-precision array uses 100 * 100 * 8 bytes (80,000 bytes). </span>
+<span class="k">ReDim</span> <span class="n">MyDoubleArray</span> <span class="p">(</span><span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">Double</span> 
+ 
+<span class="c1">' Variant array uses at least 160,000 bytes (100 * 100 * 16 bytes). </span>
+<span class="k">ReDim</span> <span class="n">MyVariantArray</span><span class="p">(</span><span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span> 
+</code></pre></div></div>
+
+<p>陣列的大小上限，將根據您的作業系統與可用的記憶體而有所不同。 使用超出您的系統上可用 RAM 數量的陣列會比較緩慢，因為必須往返磁碟讀取及寫入資料。</p>
+
+<h2 id="宣告動態陣列">宣告動態陣列</h2>
+
+<p>透過宣告動態陣列，您便可以在程式碼執行時調整陣列的大小。 使用 <strong>Static</strong>、<strong>Dim</strong>、<strong>Private</strong> 或 <strong>Public</strong> 陳述式來宣告陣列，將括號內保留空白，如下列範例所示。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Dim</span> <span class="nv">sngArray</span><span class="p">()</span> <span class="ow">As</span> <span class="k">Single</span> 
+</code></pre></div></div>
+
+<p>您可以使用 <strong>ReDim</strong> 陳述式隱含宣告程序內的陣列。 使用 <strong>ReDim</strong> 陳述式時請務必注意，不要將陣列的名稱輸入錯誤。 即使已在模組中包含 <strong>Option Explicit</strong> 陳述式，系統仍會建立第二個陣列。</p>
+
+<p>在陣列的 <strong>scope</strong> 程序內，使用 <strong>ReDim</strong> 陳述式來變更維度的數量、定義元素數量，以及定義每個維度的上限和下限。 您可以使用 <strong>ReDim</strong> 陳述式，視需要變更動態陣列。 不過，每次您執行此動作時，陣列中現有的值將會遺失。 使用 <strong>ReDim Preserve</strong> 來擴大陣列，同時保留陣列中現有的值。</p>
+
+<p>例如，下列陳述式會將陣列放大 10 個元素，而不會遺失原始元素目前的值。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ReDim</span> <span class="n">Preserve</span> <span class="n">varArray</span><span class="p">(</span><span class="n">UBound</span><span class="p">(</span><span class="n">varArray</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span> 
+</code></pre></div></div>
+
+<p>使用<strong>Preserve</strong> 關鍵字搭配陣列時，您只可以變更最後一個維度的上限，但無法變更維度的數量。</p>
+
+
+      <div class="pagination">
+        
+          <a class="prev" href="/develop/2018/12/11/vba-declaring-variables.html">&laquo; 上一篇 <p>VBA - 宣告變數</p></a>
+        
+
+        
+          <a class="next" href="/develop/2018/12/13/vba-ifthenelse-statements.html">下一篇 &raquo; <p>VBA - 使用判斷式</p></a>
+        
+      </div>
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
