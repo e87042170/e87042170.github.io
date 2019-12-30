@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>VBA - 宣告變數 | Welcome to e87042170’s Homepage</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="VBA - 宣告變數" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="當宣告變數時，您通常會使用 Dim 陳述式。 可以將宣告陳述式放置於程序內，以建立程序層級變數。 下列範例會建立變數，並指定字串資料類型。 Dim strName As String 如果此陳述式會出現在程序中，則變數 strName 只能用在該程序。 如果在模組的宣告區段中出現陳述式，則變數 strName 可供模組內所有的程序使用，而非用於專案中其他模組內的程序。" />
+<meta property="og:description" content="當宣告變數時，您通常會使用 Dim 陳述式。 可以將宣告陳述式放置於程序內，以建立程序層級變數。 下列範例會建立變數，並指定字串資料類型。 Dim strName As String 如果此陳述式會出現在程序中，則變數 strName 只能用在該程序。 如果在模組的宣告區段中出現陳述式，則變數 strName 可供模組內所有的程序使用，而非用於專案中其他模組內的程序。" />
+<link rel="canonical" href="http://localhost:4000/develop/2018/12/11/vba-declaring-variables.html" />
+<meta property="og:url" content="http://localhost:4000/develop/2018/12/11/vba-declaring-variables.html" />
+<meta property="og:site_name" content="Welcome to e87042170’s Homepage" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-11T00:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"當宣告變數時，您通常會使用 Dim 陳述式。 可以將宣告陳述式放置於程序內，以建立程序層級變數。 下列範例會建立變數，並指定字串資料類型。 Dim strName As String 如果此陳述式會出現在程序中，則變數 strName 只能用在該程序。 如果在模組的宣告區段中出現陳述式，則變數 strName 可供模組內所有的程序使用，而非用於專案中其他模組內的程序。","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/develop/2018/12/11/vba-declaring-variables.html"},"@type":"BlogPosting","url":"http://localhost:4000/develop/2018/12/11/vba-declaring-variables.html","headline":"VBA - 宣告變數","dateModified":"2018-12-11T00:00:00+08:00","datePublished":"2018-12-11T00:00:00+08:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!--<a id="skip-to-content" href="#content">Skip to the content.</a>-->
+    
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Welcome to e87042170's Homepage</h1>
+      <h2 class="project-tagline">這裡紀錄一些學習筆記以及存放一些網頁工具.</h2>
+      
+      
+    </header>
+    
+    <nav class="main-nav">
+  <ul>
+    
+    
+      <li>
+        <a href="/" >
+          首頁
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories.html" >
+          分類
+        </a>
+      </li>
+    
+      <li>
+        <a href="/tags.html" >
+          標籤
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+    <main id="content" class="main-content" role="main">
+      <h1>VBA - 宣告變數</h1>
+      <div class="author">
+        <i class="fa fa-calendar"></i> <span class="date">11 Dec 2018</span>
+      </div>
+      <p>當宣告變數時，您通常會使用 <strong>Dim</strong> 陳述式。 可以將宣告陳述式放置於程序內，以建立程序層級變數。</p>
+
+<p>下列範例會建立變數，並指定字串資料類型。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Dim</span> <span class="nv">strName</span> <span class="ow">As</span> <span class="kt">String</span> 
+</code></pre></div></div>
+
+<p>如果此陳述式會出現在程序中，則變數 <strong>strName</strong> 只能用在該程序。 如果在<strong>模組</strong>的宣告區段中出現陳述式，則變數 <strong>strName</strong> 可供<strong>模組</strong>內所有的程序使用，而非用於專案中其他模組內的程序。<!--more--></p>
+
+<p>若要讓此變數可用於<strong>專案</strong>中的所有程序，請將 <strong>Public</strong> 陳述式置於變數之前，如下列範例中所示：</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Public</span> <span class="n">strName</span> <span class="ow">As</span> <span class="kt">String</span> 
+</code></pre></div></div>
+
+<p>可將變數宣告為下列其中一種資料類型：<strong>Boolean、Byte、Integer、Long、Currency、Single、Double、Date、String</strong> (適用於可變長度變數)、<strong>String * length</strong> (適用於固定長度字串)、<strong>Object</strong> 或 <strong>Variant</strong>。</p>
+
+<p>如果您未指定資料類型，便會依預設指派 <strong>Variant</strong> 資料類型。 您也可以使用 <strong>Type</strong> 陳述式來建立使用者定義類型。</p>
+
+<p>您可以在一個陳述式中宣告多個變數。 若要指定資料類型，您必須包含每個變數的資料類型。</p>
+
+<p>在下列陳述式中，變數 <code class="highlighter-rouge">intX</code>、<code class="highlighter-rouge">intY</code> 及 <code class="highlighter-rouge">intZ</code> 宣告為類型 <strong>Integer</strong>。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Dim</span> <span class="nv">intX</span> <span class="ow">As</span> <span class="kt">Integer</span><span class="p">,</span> <span class="n">intY</span> <span class="ow">As</span> <span class="kt">Integer</span><span class="p">,</span> <span class="n">intZ</span> <span class="ow">As</span> <span class="kt">Integer</span> 
+</code></pre></div></div>
+
+<p>在下列陳述式中，<code class="highlighter-rouge">intX</code> 和 <code class="highlighter-rouge">intY</code> 宣告為類型 <strong>Variant</strong>，而且僅 <code class="highlighter-rouge">intZ</code> 宣告為類型 <strong>Integer</strong>。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Dim</span> <span class="nv">intX</span><span class="p">,</span> <span class="n">intY</span><span class="p">,</span> <span class="n">intZ</span> <span class="ow">As</span> <span class="kt">Integer</span> 
+</code></pre></div></div>
+
+<p>您沒有在宣告陳述式中提供變數的資料類型。 如果您省略資料類型，變數將會是 <strong>Variant</strong> 類型。</p>
+
+<p>在上述陳述式將 <code class="highlighter-rouge">x</code> 和 <code class="highlighter-rouge">y</code> 宣告為整數的簡略表示法為：</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Dim</span> <span class="nv">intX</span><span class="err">%</span><span class="p">,</span> <span class="n">intY%</span><span class="p">,</span> <span class="n">intZ</span> <span class="n">as</span> <span class="kt">Integer</span>
+</code></pre></div></div>
+
+<p>類型的簡略表示法為：% -integer; &amp; -long; @ -currency; # -double; ! -single; $ -string</p>
+
+<h2 id="public-陳述式">Public 陳述式</h2>
+
+<p>您可以使用 <strong>Public</strong> 陳述式來宣告公用模組層級變數。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Public</span> <span class="n">strName</span> <span class="ow">As</span> <span class="kt">String</span> 
+</code></pre></div></div>
+
+<p><strong>公用變數</strong>可以用於<strong>專案中</strong>的任何程序。 如果在標準模組或類別模組中宣告公用變數，它也可用於任何在參考專案中已宣告公用變數的專案。</p>
+
+<h2 id="private-陳述式">Private 陳述式</h2>
+
+<p>您可以使用 <strong>Private</strong> 陳述式來宣告私人模組層級變數。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Private</span> <span class="n">MyName</span> <span class="ow">As</span> <span class="kt">String</span> 
+</code></pre></div></div>
+
+<p>只有<strong>相同模組</strong>中的程序，才可使用<strong>私人變數</strong>。</p>
+
+<p>當用於<strong>模組層級</strong>時，<strong>Dim</strong> 陳述式便相當於 <strong>Private</strong> 陳述式。 您可能想要使用 <strong>Private</strong> 陳述式，讓您的程式碼更容易讀取與解譯。</p>
+
+<h2 id="static-陳述式">Static 陳述式</h2>
+
+<p>當您使用 <strong>Static</strong> 陳述式，而不是 <strong>Dim</strong> 陳述式來宣告程序中的變數時，宣告的變數會保留其呼叫該程序之間的值。</p>
+
+<h2 id="option-explicit-陳述式">Option Explicit 陳述式</h2>
+
+<p>您只要在指派的陳述式中使用變數，便等於在 Visual Basic 中隱含宣告變數。 隱含宣告的所有變數都是屬於 <strong>Variant</strong> 類型。 <strong>Variant</strong> 類型的變數會比其他大部分的變數，需要更多的記憶體資源。</p>
+
+<p>如果您能夠明確地和特定資料類型宣告變數，應用程式將會更有效率。 明確宣告所有變數，可減少命名衝突錯誤及拼字錯誤的發生率。</p>
+
+<p>如果您不想讓 Visual Basic 作隱含的宣告，可以在進行任何程序之前，將 <strong>Option Explicit</strong> 陳述式放置於模組中。 此陳述式會要求您在模組內明確地宣告所有變數。 如果模組包含 <strong>Option Explicit</strong> 陳述式，當 Visual Basic 遇到未於之前宣告的變數名稱或名稱拼寫不正確時，就會發生編譯時期錯誤。
+您可以在 Visual Basic 程式設計環境中設定選項，在所有的新模組中自動包含 <strong>Option Explicit</strong> 的陳述式。 請注意這個選項不會變更已寫入的現有程式碼。</p>
+
+<p>您必須明確地宣告<strong>固定陣列</strong>和<strong>動態陣列</strong>。</p>
+
+<h2 id="宣告自動化物件變數">宣告自動化物件變數</h2>
+
+<p>當您使用一個應用程式來控制另一個應用程式的物件時，您應該設定參照至另一個應用程式的<strong>型別程式庫</strong>。 在您設定參照之後，可以根據其最特定的類型來宣告物件變數。 例如，將參照設定為 Microsoft Excel 的型別程式庫時，如果是在 Microsoft Word 中，您可以代表 Excel 的<strong>工作表</strong>物件，從 Word 中來宣告類型<strong>工作表</strong>的變數。</p>
+
+<p>如果您正在使用另一個應用程式來控制 Microsoft Access 物件，在大部分的情況下，您可以根據其最特定的類型來宣告物件變數。 您也可以使用<strong>New</strong>關鍵字以自動建立物件的新執行個體。 不過，您可能需要指示其為 Microsoft Access 物件。 例如，當您從 Visual Basic 內代表 Access 表單來宣告物件變數時，您必須將 Access 表單物件，和 Visual Basic 的表單物件作區別。 包含在變數宣告中的型別程式庫名稱，如下列範例所示：</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Dim</span> <span class="nv">frmOrders</span> <span class="ow">As</span> <span class="k">New</span> <span class="n">Access</span><span class="p">.</span><span class="n">Form</span> 
+</code></pre></div></div>
+
+<p>某些應用程式無法識別個別的 Access 物件類型。 即使您從這些應用程式設定參照至 Access 類型程式庫，您必須將所有的 Access 物件變數宣告為 Object 類型。</p>
+
+<p>您也不可以使用<strong>New</strong>關鍵字來建立物件的新執行個體。</p>
+
+<p>下列範例顯示如何從無法識別的 Access 物件類型的<strong>Application</strong>，來宣告 Access <strong>Application</strong>物件的執行實體物件變數。 然後，應用程式會建立<strong>Application</strong>物件的執行實體物件。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Dim</span> <span class="nv">appAccess</span> <span class="ow">As</span> <span class="kt">Object</span> 
+<span class="k">Set</span> <span class="n">appAccess</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="p">(</span><span class="s">"Access.Application"</span><span class="p">)</span>
+</code></pre></div></div>
+
+
+      <div class="pagination">
+        
+          <a class="prev" href="/develop/2018/12/10/vba-object-variables.html">&laquo; 上一篇 <p>VBA - 建立物件變數</p></a>
+        
+
+        
+          <a class="next" href="/develop/2018/12/12/vba-declaring-arrays.html">下一篇 &raquo; <p>VBA - 宣告陣列</p></a>
+        
+      </div>
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
