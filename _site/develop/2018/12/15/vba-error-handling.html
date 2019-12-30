@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>VBA - 錯誤處理 | Welcome to e87042170’s Homepage</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="VBA - 錯誤處理" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="VBA程式會有3種錯誤情況： 語法錯誤 執行階段錯誤 邏輯錯誤 要使用錯誤處理陳述式，你必須在陳述式指定的位置，加上一段錯誤處理程序；你也可以使用這段程序停止錯誤處理。" />
+<meta property="og:description" content="VBA程式會有3種錯誤情況： 語法錯誤 執行階段錯誤 邏輯錯誤 要使用錯誤處理陳述式，你必須在陳述式指定的位置，加上一段錯誤處理程序；你也可以使用這段程序停止錯誤處理。" />
+<link rel="canonical" href="http://localhost:4000/develop/2018/12/15/vba-error-handling.html" />
+<meta property="og:url" content="http://localhost:4000/develop/2018/12/15/vba-error-handling.html" />
+<meta property="og:site_name" content="Welcome to e87042170’s Homepage" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-15T00:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"VBA程式會有3種錯誤情況： 語法錯誤 執行階段錯誤 邏輯錯誤 要使用錯誤處理陳述式，你必須在陳述式指定的位置，加上一段錯誤處理程序；你也可以使用這段程序停止錯誤處理。","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/develop/2018/12/15/vba-error-handling.html"},"@type":"BlogPosting","url":"http://localhost:4000/develop/2018/12/15/vba-error-handling.html","headline":"VBA - 錯誤處理","dateModified":"2018-12-15T00:00:00+08:00","datePublished":"2018-12-15T00:00:00+08:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!--<a id="skip-to-content" href="#content">Skip to the content.</a>-->
+    
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Welcome to e87042170's Homepage</h1>
+      <h2 class="project-tagline">這裡紀錄一些學習筆記以及存放一些網頁工具.</h2>
+      
+      
+    </header>
+    
+    <nav class="main-nav">
+  <ul>
+    
+    
+      <li>
+        <a href="/" >
+          首頁
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories.html" >
+          分類
+        </a>
+      </li>
+    
+      <li>
+        <a href="/tags.html" >
+          標籤
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+    <main id="content" class="main-content" role="main">
+      <h1>VBA - 錯誤處理</h1>
+      <div class="author">
+        <i class="fa fa-calendar"></i> <span class="date">15 Dec 2018</span>
+      </div>
+      <p>VBA程式會有3種錯誤情況：</p>
+<ol>
+  <li>語法錯誤</li>
+  <li>執行階段錯誤</li>
+  <li>邏輯錯誤</li>
+</ol>
+
+<p>要使用錯誤處理陳述式，你必須在陳述式指定的位置，加上一段錯誤處理程序；你也可以使用這段程序停止錯誤處理。<!--more--></p>
+
+<h2 id="語法">語法</h2>
+
+<p>錯誤處理陳述式有3種：</p>
+<ol>
+  <li><strong>On Error GoTo</strong> <em>line</em></li>
+  <li><strong>On Error Resume Next</strong></li>
+  <li><strong>On Error GoTo 0</strong></li>
+</ol>
+
+<p><strong>On Error</strong> 陳述式可以是下列的任何一種格式：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>陳述式</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>On Error GoTo</strong> <em>line</em></td>
+      <td>可在錯誤處理常式 <em>line</em> 參數指定的位置開始處理錯誤程序。<br /><em>line</em> 引數可以是<code class="highlighter-rouge">行標籤</code>或<code class="highlighter-rouge">行號</code>。<br />如果發生執行階段錯誤，控制權會移至 <em>line</em>，使錯誤處理常式作用。<br />指定的 <em>line</em> 必須位於 <strong>On Error</strong> 陳述式相同的程序中;否則，會發生編譯階段錯誤。</td>
+    </tr>
+    <tr>
+      <td><strong>On Error Resume Next</strong></td>
+      <td>當發生執行階段錯誤時，控制項會移至錯誤陳述式下一行，並繼續執行陳述式。 存取物件時，請使用這個格式，而不要使用 <strong>On Error GoTo</strong> 。</td>
+    </tr>
+    <tr>
+      <td><strong>On Error GoTo 0</strong></td>
+      <td>停用目前程序中任何已啟動的錯誤處理常式。</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="註解">註解</h2>
+
+<p>如果你不使用 <strong>On Error</strong> 陳述式，任何的執行階段錯誤都可能導致嚴重的錯誤；也就是只會顯示錯誤訊息，就立刻停止執行程式。</p>
+
+<p>一個"啟用中"的錯誤處理器是被 <strong>On Error</strong> 陳述式開啟的；一個"作用中"的錯誤處理器，是指一個被啟用的錯誤處理器正在處理錯誤的程序中。如果一個錯誤發生在錯誤處理作用中(錯誤發生在 <strong>Resume</strong>,<strong>Exit Sub</strong>,<strong>Exit Function</strong> 或 <strong>Exit Property</strong> 陳述式中)，目前程序的錯誤處理將無法處理錯誤。控制權將會返回呼叫程序。</p>
+
+<p>如果返回的呼叫程序有啟用中的錯誤處理器，它將會被用來處理該錯誤。如果返回的呼叫程序的錯誤處理器正在作用中，控制權將會再回傳之前的呼叫程序，直到一個被啟用但沒作用中的錯誤處理器被找到。如果沒有被啟用但沒作用中的錯誤處理器被找到，這個地方將會產生嚴重的錯誤。</p>
+
+<p>每次錯誤處理器將控制權回傳給呼叫程序，這個呼叫程序將會變成目前的程序。之後在任何程序處理的錯誤，會繼續執行 <strong>Resume</strong> 陳述式所指定的程序。</p>
+
+<p>錯誤處理常式不是 <strong>Sub</strong> 程序或者 <strong>Function</strong> 程序。它是一段被<code class="highlighter-rouge">行標籤</code>或<code class="highlighter-rouge">行號</code>標示的程式碼區塊。</p>
+
+<p>錯誤處理常式依據 <strong>Err</strong> 物件的 <strong>Number</strong> 屬性的值，來判斷錯誤的原因。 錯誤處理常式應該測試，或將相關的屬性值儲存於 <strong>Err</strong> 物件，在其他錯誤會發生或可能引起錯誤的程序被呼叫之前。<strong>Err</strong> 物件只會反映最近發生的錯誤。<strong>Err.Number</strong> 相關的錯誤訊息都包含在 <strong>Err.Description</strong> 裡面。</p>
+
+<p><strong>On Error Resume Next</strong> 在執行階段錯誤時，會緊接著執行 <strong>On Error Resume Next</strong> 陳述式後面的程序，或者是緊接著執行最近所呼叫的，包含 <strong>On Error Resume Next</strong> 陳述式的程序。這個陳述式允許繼續執行程序，儘管已經發生執行階段錯誤。你可以放置錯誤處理常式在可能發生錯誤的地方，而不是轉移控制權到程序的其他地方。當其他的程序被呼叫時，錯誤處理常式就會變成<code class="highlighter-rouge">非作用中</code>，</p>
+
+
+
+      <div class="pagination">
+        
+          <a class="prev" href="/develop/2018/12/14/vba-using-loop.html">&laquo; 上一篇 <p>VBA - 使用迴圈</p></a>
+        
+
+        
+      </div>
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
