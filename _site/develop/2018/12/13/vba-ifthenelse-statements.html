@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>VBA - 使用判斷式 | Welcome to e87042170’s Homepage</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="VBA - 使用判斷式" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="使用 If…Then…Else 陳述式 您可以使用 If…Then…Else 陳述式執行特定陳述式或區塊陳述式 (視條件的值而定)。 If…Then…Else 陳述式可以使用無限多層巢狀層級。 不過為了方便閱讀理解方便，您可能需要使用 Select Case 陳述式，而非多層巢狀的 If…Then…Else 陳述式。" />
+<meta property="og:description" content="使用 If…Then…Else 陳述式 您可以使用 If…Then…Else 陳述式執行特定陳述式或區塊陳述式 (視條件的值而定)。 If…Then…Else 陳述式可以使用無限多層巢狀層級。 不過為了方便閱讀理解方便，您可能需要使用 Select Case 陳述式，而非多層巢狀的 If…Then…Else 陳述式。" />
+<link rel="canonical" href="http://localhost:4000/develop/2018/12/13/vba-ifthenelse-statements.html" />
+<meta property="og:url" content="http://localhost:4000/develop/2018/12/13/vba-ifthenelse-statements.html" />
+<meta property="og:site_name" content="Welcome to e87042170’s Homepage" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-13T00:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"使用 If…Then…Else 陳述式 您可以使用 If…Then…Else 陳述式執行特定陳述式或區塊陳述式 (視條件的值而定)。 If…Then…Else 陳述式可以使用無限多層巢狀層級。 不過為了方便閱讀理解方便，您可能需要使用 Select Case 陳述式，而非多層巢狀的 If…Then…Else 陳述式。","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/develop/2018/12/13/vba-ifthenelse-statements.html"},"@type":"BlogPosting","url":"http://localhost:4000/develop/2018/12/13/vba-ifthenelse-statements.html","headline":"VBA - 使用判斷式","dateModified":"2018-12-13T00:00:00+08:00","datePublished":"2018-12-13T00:00:00+08:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!--<a id="skip-to-content" href="#content">Skip to the content.</a>-->
+    
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Welcome to e87042170's Homepage</h1>
+      <h2 class="project-tagline">這裡紀錄一些學習筆記以及存放一些網頁工具.</h2>
+      
+      
+    </header>
+    
+    <nav class="main-nav">
+  <ul>
+    
+    
+      <li>
+        <a href="/" >
+          首頁
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories.html" >
+          分類
+        </a>
+      </li>
+    
+      <li>
+        <a href="/tags.html" >
+          標籤
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+    <main id="content" class="main-content" role="main">
+      <h1>VBA - 使用判斷式</h1>
+      <div class="author">
+        <i class="fa fa-calendar"></i> <span class="date">13 Dec 2018</span>
+      </div>
+      <h2 id="使用-ifthenelse-陳述式">使用 If…Then…Else 陳述式</h2>
+
+<p>您可以使用 <strong>If…Then…Else</strong> 陳述式執行特定陳述式或區塊陳述式 (視條件的值而定)。 <strong>If…Then…Else</strong> 陳述式可以使用無限多層巢狀層級。
+不過為了方便閱讀理解方便，您可能需要使用 <strong>Select Case</strong> 陳述式，而非多層巢狀的 <strong>If…Then…Else</strong> 陳述式。<!--more--></p>
+
+<h2 id="若條件為-true-即執行陳述式">若條件為 True 即執行陳述式</h2>
+
+<p>如果要當條件為 <strong>True</strong> 時只執行一個陳述式，請使單行語法的 <strong>If…Then…Else</strong> 陳述式。 下列範例展示單行語法，省略 <strong>Else</strong> 關鍵字。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Sub</span> <span class="nf">FixDate</span><span class="p">()</span> 
+ <span class="n">myDate</span> <span class="o">=</span> <span class="p">#</span><span class="mi">2</span><span class="o">/</span><span class="mi">13</span><span class="o">/</span><span class="mi">95</span><span class="p">#</span> 
+ <span class="k">If</span> <span class="n">myDate</span> <span class="o">&lt;</span> <span class="n">Now</span> <span class="k">Then</span> <span class="n">myDate</span> <span class="o">=</span> <span class="n">Now</span> 
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div></div>
+
+<p>若要執行一行以上的程式碼，您必須使用多行語法。 此語法包含 <strong>End If</strong> 陳述式，如下列範例所示。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Sub</span> <span class="nf">AlertUser</span><span class="p">(</span><span class="n">value</span> <span class="n">as</span> <span class="kt">Long</span><span class="p">)</span> 
+ <span class="k">If</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">Then</span> 
+ <span class="n">AlertLabel</span><span class="p">.</span><span class="n">ForeColor</span> <span class="o">=</span> <span class="s">"Red"</span> 
+ <span class="n">AlertLabel</span><span class="p">.</span><span class="n">Font</span><span class="p">.</span><span class="n">Bold</span> <span class="o">=</span> <span class="k">True</span> 
+ <span class="n">AlertLabel</span><span class="p">.</span><span class="n">Font</span><span class="p">.</span><span class="n">Italic</span> <span class="o">=</span> <span class="k">True</span> 
+ <span class="k">End</span> <span class="k">If</span> 
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div></div>
+
+<h2 id="若條件為-true-就執行某些陳述式而若為-false-則執行其他陳述式">若條件為 True 就執行某些陳述式，而若為 False 則執行其他陳述式</h2>
+
+<p>使用 <strong>If…Then…Else</strong> 陳述式定義兩個可執行陳述式的區塊：當條件為 <strong>True</strong> 執行一個區塊，而當條件為 <strong>False</strong> 時則執行另個區塊。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Sub</span> <span class="nf">AlertUser</span><span class="p">(</span><span class="n">value</span> <span class="n">as</span> <span class="kt">Long</span><span class="p">)</span> 
+ <span class="k">If</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">Then</span> 
+ <span class="n">AlertLabel</span><span class="p">.</span><span class="n">ForeColor</span> <span class="o">=</span> <span class="n">vbRed</span> 
+ <span class="n">AlertLabel</span><span class="p">.</span><span class="n">Font</span><span class="p">.</span><span class="n">Bold</span> <span class="o">=</span> <span class="k">True</span> 
+ <span class="n">AlertLabel</span><span class="p">.</span><span class="n">Font</span><span class="p">.</span><span class="n">Italic</span> <span class="o">=</span> <span class="k">True</span> 
+ <span class="k">Else</span> 
+ <span class="n">AlertLabel</span><span class="p">.</span><span class="n">Forecolor</span> <span class="o">=</span> <span class="n">vbBlack</span> 
+ <span class="n">AlertLabel</span><span class="p">.</span><span class="n">Font</span><span class="p">.</span><span class="n">Bold</span> <span class="o">=</span> <span class="k">False</span> 
+ <span class="n">AlertLabel</span><span class="p">.</span><span class="n">Font</span><span class="p">.</span><span class="n">Italic</span> <span class="o">=</span> <span class="k">False</span> 
+ <span class="k">End</span> <span class="k">If</span> 
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div></div>
+
+<h2 id="若第一個條件為-false則測試第二個條件">若第一個條件為 False，則測試第二個條件</h2>
+
+<p>您可以將 <strong>ElseIf</strong> 陳述式新增至 <strong>If…Then…Else</strong> 陳述式來測試當第一個條件為 <strong>False</strong> 時所使用的第二個條件。 例如，下列函數程序是根據職別計算獎金。 若所有的 <strong>If</strong> 和 <strong>ElseIf</strong> 陳述式皆為 <strong>False</strong>，則執行<strong>Else</strong> 陳述式後面的陳述式。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Function</span> <span class="nf">Bonus</span><span class="p">(</span><span class="n">performance</span><span class="p">,</span> <span class="n">salary</span><span class="p">)</span> 
+ <span class="k">If</span> <span class="n">performance</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">Then</span> 
+ <span class="n">Bonus</span> <span class="o">=</span> <span class="n">salary</span> <span class="o">*</span> <span class="mf">0.1</span> 
+ <span class="k">ElseIf</span> <span class="n">performance</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">Then</span> 
+ <span class="n">Bonus</span> <span class="o">=</span> <span class="n">salary</span> <span class="o">*</span> <span class="mf">0.09</span> 
+ <span class="k">ElseIf</span> <span class="n">performance</span> <span class="o">=</span> <span class="mi">3</span> <span class="k">Then</span> 
+ <span class="n">Bonus</span> <span class="o">=</span> <span class="n">salary</span> <span class="o">*</span> <span class="mf">0.07</span> 
+ <span class="k">Else</span> 
+ <span class="n">Bonus</span> <span class="o">=</span> <span class="mi">0</span> 
+ <span class="k">End</span> <span class="k">If</span> 
+<span class="k">End</span> <span class="k">Function</span>
+</code></pre></div></div>
+
+<h2 id="使用-select-case-陳述式">使用 Select Case 陳述式</h2>
+
+<p>如果你使用多層巢狀的 <strong>If…Then…Else</strong> 陳述式，為了方便閱讀理解，你可以改用 <strong>Select Case</strong> 陳述式。</p>
+
+<p>在下列範例中， <strong>Select Case</strong> 陳述式會評估傳遞至程序的引數。 請注意，每個<strong>Case</strong>陳述式可以包含多個值、 一個範圍的值或值和比較運算子的組合。 如果<strong>Select Case</strong>陳述式不符合任何<strong>Case</strong>陳述式中的值，就會執行選用的<strong>Case Else</strong>陳述式。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Function</span> <span class="nf">Bonus</span><span class="p">(</span><span class="n">performance</span><span class="p">,</span> <span class="n">salary</span><span class="p">)</span> 
+  <span class="k">Select</span> <span class="k">Case</span> <span class="n">performance</span> 
+    <span class="k">Case</span> <span class="mi">1</span> 
+      <span class="n">Bonus</span> <span class="o">=</span> <span class="n">salary</span> <span class="o">*</span> <span class="mf">0.1</span> 
+    <span class="k">Case</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> 
+      <span class="n">Bonus</span> <span class="o">=</span> <span class="n">salary</span> <span class="o">*</span> <span class="mf">0.09</span> 
+    <span class="k">Case</span> <span class="mi">4</span> <span class="k">To</span> <span class="mi">6</span> 
+      <span class="n">Bonus</span> <span class="o">=</span> <span class="n">salary</span> <span class="o">*</span> <span class="mf">0.07</span> 
+    <span class="k">Case</span> <span class="ow">Is</span> <span class="o">&gt;</span> <span class="mi">8</span> 
+      <span class="n">Bonus</span> <span class="o">=</span> <span class="mi">100</span> 
+    <span class="k">Case</span> <span class="k">Else</span> 
+      <span class="n">Bonus</span> <span class="o">=</span> <span class="mi">0</span> 
+  <span class="k">End</span> <span class="k">Select</span> 
+<span class="k">End</span> <span class="k">Function</span> 
+</code></pre></div></div>
+
+
+      <div class="pagination">
+        
+          <a class="prev" href="/develop/2018/12/12/vba-declaring-arrays.html">&laquo; 上一篇 <p>VBA - 宣告陣列</p></a>
+        
+
+        
+          <a class="next" href="/develop/2018/12/14/vba-using-loop.html">下一篇 &raquo; <p>VBA - 使用迴圈</p></a>
+        
+      </div>
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
