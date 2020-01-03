@@ -17,7 +17,7 @@ VBA 的 **Date** 與 **Time** 函數可以幫助開發者快速轉換格式，�
 ```vb
 date()
 ```
-
+<!--more-->
 ### 範例
 
 增加一個按鈕並增加下列函數。
@@ -203,16 +203,16 @@ Private Sub Constant_demo_Click()
    Dim toDate as Variant
    toDate = "01-Jan-10 23:59:00"
    
-   msgbox("Line 1 : " &DateDiff("yyyy",fromDate,toDate))
-   msgbox("Line 2 : " &DateDiff("q",fromDate,toDate))
-   msgbox("Line 3 : " &DateDiff("m",fromDate,toDate))
-   msgbox("Line 4 : " &DateDiff("y",fromDate,toDate))
-   msgbox("Line 5 : " &DateDiff("d",fromDate,toDate))
-   msgbox("Line 6 : " &DateDiff("w",fromDate,toDate))
-   msgbox("Line 7 : " &DateDiff("ww",fromDate,toDate))
-   msgbox("Line 8 : " &DateDiff("h",fromDate,toDate))
-   msgbox("Line 9 : " &DateDiff("n",fromDate,toDate))
-   msgbox("Line 10 : "&DateDiff("s",fromDate,toDate))
+   msgbox("Line 1 : " & DateDiff("yyyy",fromDate,toDate))
+   msgbox("Line 2 : " & DateDiff("q",fromDate,toDate))
+   msgbox("Line 3 : " & DateDiff("m",fromDate,toDate))
+   msgbox("Line 4 : " & DateDiff("y",fromDate,toDate))
+   msgbox("Line 5 : " & DateDiff("d",fromDate,toDate))
+   msgbox("Line 6 : " & DateDiff("w",fromDate,toDate))
+   msgbox("Line 7 : " & DateDiff("ww",fromDate,toDate))
+   msgbox("Line 8 : " & DateDiff("h",fromDate,toDate))
+   msgbox("Line 9 : " & DateDiff("n",fromDate,toDate))
+   msgbox("Line 10 : "& DateDiff("s",fromDate,toDate))
 End Sub
 ```
 
