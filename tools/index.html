@@ -1,0 +1,14 @@
+---
+layout: default
+title: 工具
+---
+
+<h1>網頁工具</h1>
+{% assign web_tools = site.tools %}
+<ul>
+{% for tool in web_tools %}
+    <li>
+    <h3><a href="{{ tool.url }}">{{ tool.title }}</a></h3>
+    </li>
+{% endfor %}
+</ul>
