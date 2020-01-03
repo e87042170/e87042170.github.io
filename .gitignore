@@ -1,6 +1,3 @@
-
-_includes/adsense.html
-_includes/adsense.html
 _site/404.html
 _site/ads.txt
 _site/categories.html
@@ -30,7 +27,6 @@ _site/tools/HanoiTower/css/hanoi.css
 _site/tools/HanoiTower/index.html
 _site/tools/HanoiTower/js/hanoi.js
 _site/tools/index.html
-_includes/adsense.html
 _site/404.html
 _site/categories.html
 _site/develop/2018/12/03/vba.html
@@ -50,9 +46,4 @@ _site/index.html
 _site/index1.html
 _site/page2/index.html
 _site/tags.html
-_includes/adsense.html
-_includes/adsense.html
-_includes/adsense.html
-_includes/adsense.html
 _site/404.html
-Gemfile.lock
