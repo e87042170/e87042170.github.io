@@ -42,5 +42,23 @@ VBA程式會有3種錯誤情況：
 
 錯誤處理常式依據 **Err** 物件的 **Number** 屬性的值，來判斷錯誤的原因。 錯誤處理常式應該測試，或將相關的屬性值儲存於 **Err** 物件，在其他錯誤會發生或可能引起錯誤的程序被呼叫之前。**Err** 物件只會反映最近發生的錯誤。**Err.Number** 相關的錯誤訊息都包含在 **Err.Description** 裡面。
 
-**On Error Resume Next** 在執行階段錯誤時，會緊接著執行 **On Error Resume Next** 陳述式後面的程序，或者是緊接著執行最近所呼叫的，包含 **On Error Resume Next** 陳述式的程序。這個陳述式允許繼續執行程序，儘管已經發生執行階段錯誤。你可以放置錯誤處理常式在可能發生錯誤的地方，而不是轉移控制權到程序的其他地方。當其他的程序被呼叫時，錯誤處理常式就會變成`非作用中`，
+**On Error Resume Next** 在執行階段錯誤時，會緊接著執行 **On Error Resume Next** 陳述式後面的程序，或者是緊接著執行最近所呼叫的，包含 **On Error Resume Next** 陳述式的程序。這個陳述式允許繼續執行程序，儘管已經發生執行階段錯誤。你可以放置錯誤處理常式在可能發生錯誤的地方，而不是轉移控制權到程序的其他地方。當其他的程序被呼叫時，錯誤處理常式就會變成`非作用中`，所以你應該在每一個被呼叫的常式執行 **On Error Resume Next** 陳述式，如果你想要在常式裡面做錯誤的處理。
 
+當存取物件期間產生處理錯誤，**On Error Resume Next** 可能會優先於 **On Error GoTo**。
+
+**On Error GoTo 0** 會停止目前程序的錯誤處理。他不會指定 _line 0_ 作為錯誤處理的起始點，即使程序包含行號為 0 的 _line_。沒有 **On Error GoTo 0** 陳述式，當程序結束時會自動停用錯誤處理器。
+
+為了避免在沒有錯誤被觸發的情況下，執行錯誤處理程式碼，請在錯誤處理常事前，放置 **Exit Sub**,**Exit Function** 或 **Exit Property** 陳述式，如下列程式片段所示：
+
+```vb
+Sub InitializeMatrix(Var1, Var2, Var3, Var4) 
+ On Error GoTo ErrorHandler 
+ . . . 
+ Exit Sub 
+ErrorHandler: 
+ . . . 
+ Resume Next 
+End Sub
+```
+
+在這裡，錯誤處理程式碼會遵循 **Exit Sub** 陳述式並且先於 **End Sub** 陳述式，從而分隔程序的流程。錯誤處理程式碼可以放在程序的任何地方。
