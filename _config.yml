@@ -20,5 +20,12 @@ navs:
 - title: 標籤
   url: /tags.html
 
-- title: 遊戲
-  url: /HanoiTower.html
+- title: 工具
+  url: /tools/
+
+tools:
+- title: 挑戰河內塔
+  url: /tools/HanoiTower/
+
+- title: 2D打磚塊
+  url: /tools/2DBreakoutGame/
